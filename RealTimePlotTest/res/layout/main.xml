@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+    android:id="@+id/leftLinear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="    Oxy level   "
+        android:textSize="35dp" 
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:text="0"
+        android:textSize="70dp" 
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        />
+
+    <TextView 
+        android:id="@+id/textView3"
+        android:layout_below="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heart rate"
+        android:textSize="35dp"
+        android:paddingTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        />
+    <TextView 
+        android:id="@+id/textView4"
+        android:layout_below="@id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="70dp"
+        android:paddingTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        />
+</RelativeLayout>
+    
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/leftLinear"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/lButton"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:background="@drawable/line_graph_icon2"
+            android:onClick="SwapLine"
+            android:text="Line Graph"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/white"
+            android:textSize="50dp" />
+
+        <Button
+            android:id="@+id/bButton"
+            android:layout_width="286dp"
+            android:layout_height="400dp"
+            android:layout_weight="5.20"
+            android:background="@drawable/bar_graph_icon"
+            android:onClick="SwapBar"
+            android:text="Bar Graph"
+            android:textColor="@android:color/black"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leftLinear"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/leftLinear"
+        android:background="@drawable/white"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect a device"
+            android:paddingTop="5dp"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="35dp"
+            android:textSize="35dp" />
+
+        <Button
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_below="@id/tvStatus"
+            android:layout_weight="0.65"
+            android:background="@drawable/bluetooth"
+            android:onClick="onBTButton"
+            android:paddingTop="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
